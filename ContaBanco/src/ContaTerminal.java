@@ -1,8 +1,9 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Qual é o nome do cliente?");
         String nomeCliente = scanner.nextLine();
@@ -14,7 +15,6 @@ public class ContaTerminal {
         int numeroConta = scanner.nextInt();
 
         System.out.println("Qual é o saldo da conta?");
-        // O double só está retornando valores decimais separados por vírgula
         double saldo = scanner.nextDouble();
         
         System.out.println("Olá " + nomeCliente + "!");
